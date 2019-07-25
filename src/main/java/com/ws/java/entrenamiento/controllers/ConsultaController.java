@@ -8,12 +8,14 @@ import org.springframework.web.bind.annotation.RestController;
 import java.io.FileReader;
 import com.ws.java.entrenamiento.models.ConsultaModel;
 
+import io.swagger.annotations.Api;
+
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
 
-
+@Api(tags = "Consulta")
 @RestController //Le decimos que es un rest controller
 @RequestMapping(path = "/consultaInfo/service") //Ruta para encontrar el servicio
 public class ConsultaController {
