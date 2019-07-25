@@ -6,12 +6,15 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import com.ws.java.entrenamiento.models.LoginModel;
+
+import io.swagger.annotations.Api;
+
 import java.io.FileReader;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-
+@Api(tags = "Login")
 @RestController //Le decimos que es un rest controller
 @RequestMapping(path = "/servicesREST/login") //Ruta para encontrar el servicio
 public class LoginController {
