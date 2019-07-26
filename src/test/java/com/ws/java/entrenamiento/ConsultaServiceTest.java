@@ -19,7 +19,7 @@ public class ConsultaServiceTest {
 		
 		ConsultaService co = new ConsultaService();
 		
-		ConsultaModel consultaresponse = co.validateUser(user); //new LoginController();
+		ConsultaModel consultaresponse = co.validateUser(user);
 			System.out.println("Primer Escenario de Prueba");
 			System.out.println(consultaresponse.getId());
 			System.out.println(consultaresponse.getNombre());
