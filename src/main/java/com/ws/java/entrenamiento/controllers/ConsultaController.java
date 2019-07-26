@@ -29,10 +29,7 @@ public class ConsultaController {
 	
 		public @ResponseBody ConsultaModel PublishService(@RequestBody ConsultaModel userid) throws Exception {
 		
-		ConsultaService response = new ConsultaService();
-		
-		System.out.println("User: " + userid.getUserid());
-		
+		ConsultaService response = new ConsultaService();	
 		ConsultaModel respuesta = response.method(userid);
 			
 		return respuesta;

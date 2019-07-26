@@ -31,7 +31,7 @@ public class ConsultaService {
 					respuesta.setCapagna(jsonObject.get("campagna").toString());
 					respuesta.setFecha(jsonObject.get("fecha").toString());
 					respuesta.setMessage("User Valid");
-				
+					System.out.println("User: " + userid.getUserid());
 				}
 		    }
 				
