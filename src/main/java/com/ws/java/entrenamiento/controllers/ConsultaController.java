@@ -1,6 +1,7 @@
 package com.ws.java.entrenamiento.controllers;
 
 
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -20,10 +21,11 @@ import com.ws.java.entrenamiento.services.ConsultaService;
 public class ConsultaController {
 
 	@RequestMapping(
-			method = RequestMethod.GET, //indicamos que el servicio es POST
+			method = RequestMethod.GET, //indicamos que el servicio es get
 			path = "/validateUser", //Ruta del metodo
 			consumes = "application/json", //Indicamos que recibe json
 			produces = "application/json") //Indicamos que produce json
+	
 			//consumes = {MediaType.APPLICATION_XML_VALUE},
 			//produces = {MediaType.APPLICATION_XML_VALUE})
 	
