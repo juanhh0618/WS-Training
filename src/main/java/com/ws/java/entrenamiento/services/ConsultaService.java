@@ -5,6 +5,7 @@ import java.io.FileReader;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+import org.springframework.stereotype.Service;
 
 import com.ws.java.entrenamiento.models.ConsultaModel;
 
@@ -15,6 +16,8 @@ import com.ws.java.entrenamiento.models.ConsultaModel;
  * @category Service
  * In this file we are bringing the info from a json file 
  */
+
+@Service
 public class ConsultaService {
 
 	public ConsultaModel validateUser(ConsultaModel userid) {
