@@ -1,5 +1,6 @@
 package com.ws.java.entrenamiento.controllers;
 
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -25,8 +26,8 @@ public class ConsultaController {
 			path = "/validateUser", //Ruta del metodo
 			consumes = "application/json", //Indicamos que recibe json
 			produces = "application/json") //Indicamos que produce json
-			//consumes = "application/xml",
-			//produces = "application/xml")
+			//consumes = {MediaType.APPLICATION_XML_VALUE},
+			//produces = {MediaType.APPLICATION_XML_VALUE})
 	public @ResponseBody ConsultaModel validateUser(@RequestBody ConsultaModel user) throws Exception {
 		ConsultaModel response = new ConsultaModel();
 		
