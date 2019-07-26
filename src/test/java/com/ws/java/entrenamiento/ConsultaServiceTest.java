@@ -37,7 +37,7 @@ public class ConsultaServiceTest {
 		
 		ConsultaService co = new ConsultaService();
 		
-		ConsultaModel consultaresponse = co.validateUser(user); //new LoginController();
+		ConsultaModel consultaresponse = co.validateUser(user);
 			System.out.println("Segundo Escenario de Prueba");
 			System.out.println(consultaresponse.getMessage());
 			assertEquals("User Not Found",consultaresponse.getMessage());
