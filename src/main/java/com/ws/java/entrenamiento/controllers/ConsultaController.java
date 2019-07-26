@@ -15,6 +15,13 @@ import io.swagger.annotations.Api;
 import com.ws.java.entrenamiento.services.ConsultaService;
 
 
+/**
+ * 
+ * @author JUANCARLOSHERNANDEZH
+ * @since 23/07/2019
+ * @category Controller
+ * In this controller we are publish the web service
+ */
 @Api(tags = "Consulta")
 @RestController //Le decimos que es un rest controller
 @RequestMapping(path = "/consultaInfo/service") //Ruta para encontrar el servicio

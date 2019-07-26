@@ -12,6 +12,13 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
+/**
+ * 
+ * @author JUANCARLOSHERNANDEZH
+ * @since 24/07/2019
+ * @category Configuration
+ * In this file we are creating a style of documentation with swagger framework
+ */
 @Configuration
 @EnableSwagger2
 public class SwaggerConfig {

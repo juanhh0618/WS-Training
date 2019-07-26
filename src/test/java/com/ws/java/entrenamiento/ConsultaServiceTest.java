@@ -6,6 +6,14 @@ import org.junit.Test;
 import com.ws.java.entrenamiento.services.ConsultaService;
 import com.ws.java.entrenamiento.models.ConsultaModel;
 
+/**
+ * 
+ * @author JUANCARLOSHERNANDEZH
+ * @since 26/07/2019
+ * @category Test
+ * In this file we are testing the ConsultaModel class and his method
+ * And we are giving two testing cases
+ */
 public class ConsultaServiceTest {
 	
 	@Test

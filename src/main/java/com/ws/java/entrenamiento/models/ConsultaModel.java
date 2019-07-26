@@ -2,6 +2,13 @@ package com.ws.java.entrenamiento.models;
 
 import java.io.Serializable;
 
+/**
+ * 
+ * @author JUANCARLOSHERNANDEZH
+ * @since 18/07/2019
+ * @category Model
+ * In this file we are creating a model of attributes for the service
+ */
 public class ConsultaModel implements Serializable {
 	/**
 	 * 

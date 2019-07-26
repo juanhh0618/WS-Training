@@ -8,6 +8,13 @@ import org.json.simple.parser.JSONParser;
 
 import com.ws.java.entrenamiento.models.ConsultaModel;
 
+/**
+ * 
+ * @author JUANCARLOSHERNANDEZH
+ * @since 26/07/2019
+ * @category Service
+ * In this file we are bringing the info from a json file 
+ */
 public class ConsultaService {
 
 	public ConsultaModel validateUser(ConsultaModel userid) {
