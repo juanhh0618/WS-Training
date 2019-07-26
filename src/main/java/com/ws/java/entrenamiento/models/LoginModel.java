@@ -9,6 +9,13 @@ import java.text.ParseException;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
+/**
+ * 
+ * @author JUANCARLOSHERNANDEZH
+ * @since 18/07/2019
+ * @category Model
+ * In this file we are creating a model of attributes for the service
+ */
 public class LoginModel implements Serializable {
 	/**
 	 * 

@@ -1,5 +1,12 @@
 package com.ws.java.entrenamiento.services;
 
+/**
+ * 
+ * @author JUANCARLOSHERNANDEZH
+ * @since 26/07/2019
+ * @category Service
+ * In this file we are bringing the info from a json file 
+ */
 import java.io.FileReader;
 
 import org.json.simple.JSONArray;

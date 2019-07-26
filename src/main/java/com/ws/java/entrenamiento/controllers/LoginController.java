@@ -1,6 +1,14 @@
 package com.ws.java.entrenamiento.controllers;
 
 import org.springframework.web.bind.annotation.RequestBody;
+
+/**
+ * 
+ * @author JUANCARLOSHERNANDEZH
+ * @since 23/07/2019
+ * @category Controller
+ * In this controller we are publish the web service
+ */
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
