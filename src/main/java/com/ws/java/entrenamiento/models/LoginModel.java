@@ -1,13 +1,8 @@
 package com.ws.java.entrenamiento.models;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.Serializable;
-import java.text.ParseException;
 
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
+import java.io.Serializable;
+
 
 /**
  * 
