@@ -26,7 +26,7 @@ public class LoginController {
 		public @ResponseBody LoginModel PublishService(@RequestBody LoginModel user) throws Exception {
 		
 			LoginService response = new LoginService();
-			LoginModel respuesta = response.method(user);
+			LoginModel respuesta = response.validateUser(user);
 			
 			return respuesta;
 	}

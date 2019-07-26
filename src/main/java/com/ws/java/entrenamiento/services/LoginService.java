@@ -10,9 +10,9 @@ import com.ws.java.entrenamiento.models.LoginModel;
 
 public class LoginService {
 
-	public LoginModel method(LoginModel user) {
+	public LoginModel validateUser(LoginModel user) {
 		LoginModel respuesta = new LoginModel();
-		
+		respuesta.setStatus("Invalid User");
 			try {		
 				JSONParser parser = new JSONParser();			
 				Object obj = parser.parse(new FileReader("C:\\Users\\JUANCARLOSHERNANDEZH\\Desktop\\usuarios.json"));				
@@ -30,11 +30,13 @@ public class LoginService {
 					respuesta.setLastAccess(jsonObject.get("lastAccess").toString());
 					respuesta.setStatus(jsonObject.get("status").toString());
 					respuesta.setPassword("******");
-					System.out.println("User: " + user.getUser());
-					System.out.println("Password: " + user.getPassword());				
+								
 				}
-		    }
 				
+		    }
+			   
+			System.out.println("User: " + user.getUser());
+			System.out.println("Password: " + user.getPassword());	
 			return respuesta;
 			
 		} catch (Exception ex) {
