@@ -23,16 +23,17 @@ public class ConsultaController {
 	@RequestMapping(
 			method = RequestMethod.GET, //indicamos que el servicio es get
 			path = "/validateUser", //Ruta del metodo
-			consumes = "application/json", //Indicamos que recibe json
-			produces = "application/json") //Indicamos que produce json
-	
+			//consumes = "application/json", //Indicamos que recibe json
+			//produces = "application/json") //Indicamos que produce json
+			consumes = {MediaType.APPLICATION_JSON_VALUE},
+			produces = {MediaType.APPLICATION_JSON_VALUE})
 			//consumes = {MediaType.APPLICATION_XML_VALUE},
 			//produces = {MediaType.APPLICATION_XML_VALUE})
 	
 		public @ResponseBody ConsultaModel PublishService(@RequestBody ConsultaModel userid) throws Exception {
 		
 		ConsultaService response = new ConsultaService();	
-		ConsultaModel respuesta = response.method(userid);
+		ConsultaModel respuesta = response.validateUser(userid);
 			
 		return respuesta;
 	}

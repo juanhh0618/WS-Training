@@ -10,8 +10,9 @@ import com.ws.java.entrenamiento.models.ConsultaModel;
 
 public class ConsultaService {
 
-	public ConsultaModel method(ConsultaModel userid) {
+	public ConsultaModel validateUser(ConsultaModel userid) {
 		ConsultaModel respuesta = new ConsultaModel();
+		respuesta.setMessage("User Not Found");
 			try {		
 				JSONParser parser = new JSONParser();			
 				Object obj = parser.parse(new FileReader("C:\\Users\\JUANCARLOSHERNANDEZH\\Desktop\\informacion.json"));				
