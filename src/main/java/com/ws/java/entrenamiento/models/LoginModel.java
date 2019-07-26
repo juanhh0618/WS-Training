@@ -2,6 +2,7 @@ package com.ws.java.entrenamiento.models;
 
 
 import java.io.Serializable;
+import java.util.HashMap;
 
 
 /**
@@ -15,6 +16,7 @@ public class LoginModel implements Serializable {
 	/**
 	 * 
 	 */
+	
 	private static final long serialVersionUID = 3560972546182458142L;
 	private String user;
 	private String password;
