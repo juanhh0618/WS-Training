@@ -43,7 +43,7 @@ public class SwaggerConfig {
 				.apis(RequestHandlerSelectors.basePackage("com.ws.java.entrenamiento.controllers"))
 				.paths(PathSelectors.any())
 				.build()
-				.tags(new Tag("Consulta", "Servicio de consulta de informacion que valida uno dato"
+				.tags(new Tag("Consulta", "Servicio de consulta de informacion que valida un dato"
 						+ " de entrada(user)en un archivo plano y devuelve una informacion del usuario")); 
 	}
 	
