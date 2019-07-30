@@ -1,0 +1,35 @@
+{	
+	"usuarios":[	
+	{
+ 	  	"user" : "juan0618",
+    	"password" : "123",
+    	"name" : "Juan Carlos",
+    	"lastAccess" : "19/07/2019",
+    	"status" : "user valid"
+	}
+	,
+	{
+		"user" : "juan1806",
+    	"password" : "321",
+    	"name" : "Carlos",
+    	"lastAccess" : "19/07/2019",
+    	"status" : "user valid"
+	}
+	,
+	{
+		"user" : "mario12",
+    	"password" : "3214",
+    	"name" : "Mario",
+    	"lastAccess" : "23/07/2019",
+    	"status" : "user valid"
+	}
+	,
+	{
+		"user" : "john2349",
+    	"password" : "3214435",
+    	"name" : "John",
+    	"lastAccess" : "21/07/2019",
+    	"status" : "user valid"
+	}
+	]
+}
