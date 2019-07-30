@@ -1,12 +1,7 @@
 package com.ws.java.entrenamiento.services;
 
-
-import java.io.FileReader;
 import java.io.Serializable;
 
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
 import org.springframework.stereotype.Service;
 
 import com.ws.java.entrenamiento.exceptions.LoginException;
@@ -41,20 +36,27 @@ public class LoginService implements Serializable {
 	public UserResponse validateUser(RequestLogin user) throws LoginException {
 		UserResponse respuesta = new UserResponse();
 		try {
+			//UserResponse userMap =  LoginSingleton.getInstance().getUserMap().get(user.getUser());
 			if(LoginSingleton.getInstance().getUserMap().containsKey(user.getUser())) {
-				UserResponse userMap =  LoginSingleton.getInstance().getUserMap().get(user.getUser());
+				 UserResponse userMap =  LoginSingleton.getInstance().getUserMap().get(user.getUser());
 				if(user.getPassword().equals(userMap.getPassword())) {
+					
 					respuesta = userMap;
 					respuesta.setStatusUser(StatusUser.ACTIVE.name());
 					respuesta.setStatus("OK");
+					respuesta.setMessage("El usuario ha ingresado correctamente");
 				}else {
-					respuesta.setMessage("Usuario y/ password inválidos");
+					respuesta.setMessage("Usuario y/o password inválidos");
+					
 				}
 			}else {
-				respuesta.setMessage("Usuario y/ password inválidos");
+				respuesta.setMessage("Usuario y/o password inválidos");
+				
 			}
+			
 			System.out.println("User: " + user.getUser());
-			System.out.println("Password: " + user.getPassword());	
+			System.out.println("Password: " + user.getPassword());
+			
 			return respuesta;
 		} catch (Exception ex) {
 			respuesta.setMessage(ex.getMessage());

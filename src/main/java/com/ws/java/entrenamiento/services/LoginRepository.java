@@ -36,7 +36,7 @@ public class LoginRepository implements Serializable {
 		JSONParser parser = new JSONParser();			
 		Object obj;
 		try {
-			obj = parser.parse(new FileReader("C:\\Users\\JUANCARLOSHERNANDEZH\\Desktop\\usuarios.json"));
+			obj = parser.parse(new FileReader("C:\\Gitflow\\ws-java-training\\usuarios.json"));
 			JSONObject jsonObject = (JSONObject) obj;
 			JSONArray listUsers =  (JSONArray) jsonObject.get("usuarios");
 
