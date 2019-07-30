@@ -1,7 +1,7 @@
 package com.ws.java.entrenamiento.models;
 
 
-import java.io.Serializable;
+import io.swagger.annotations.ApiModelProperty;
 
 
 
@@ -12,17 +12,21 @@ import java.io.Serializable;
  * @category Model
  * In this file we are creating a model of attributes for the service
  */
-public class LoginModel implements Serializable {
+public class UserResponse extends GenericResponse {
+
 	/**
 	 * 
 	 */
-	
-	private static final long serialVersionUID = 3560972546182458142L;
+	private static final long serialVersionUID = -7060843246559213291L;
 	private String user;
 	private String password;
 	private String name;
 	private String lastAccess;
-	private String status;
+	/**status dcuales son los posibles status?
+	 * 
+	 */
+	@ApiModelProperty(value = "OK = el usario se logue bien ERROR hub un error interno" , required = true, dataType = "String", example = "pepe")
+	private String statusUser;
 
 	public String getUser() {
 		return user;
@@ -56,13 +60,20 @@ public class LoginModel implements Serializable {
 		this.lastAccess = lastAccess;
 	}
 
-	public String getStatus() {
-		return status;
+	/**
+	 * @return the statusUser
+	 */
+	public String getStatusUser() {
+		return statusUser;
 	}
 
-	public void setStatus(String status) {
-		this.status = status;
+	/**
+	 * @param statusUser the statusUser to set
+	 */
+	public void setStatusUser(String statusUser) {
+		this.statusUser = statusUser;
 	}
+
 
 	
 	

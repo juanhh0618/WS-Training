@@ -1,56 +1,64 @@
 package com.ws.java.entrenamiento.services;
 
-/**
- * 
- * @author JUANCARLOSHERNANDEZH
- * @since 26/07/2019
- * @category Service
- * In this file we are bringing the info from a json file 
- */
+
 import java.io.FileReader;
+import java.io.Serializable;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.springframework.stereotype.Service;
 
-import com.ws.java.entrenamiento.models.LoginModel;
+import com.ws.java.entrenamiento.exceptions.LoginException;
+import com.ws.java.entrenamiento.models.RequestLogin;
+import com.ws.java.entrenamiento.models.StatusUser;
+import com.ws.java.entrenamiento.models.UserResponse;
+import com.ws.java.singleton.LoginSingleton;
 
+
+/**
+ * In this file we are bringing the info from a json file 
+ * @author JUANCARLOSHERNANDEZH
+ * @since 26/07/2019
+ * @category Service
+ */
 @Service
-public class LoginService {
+public class LoginService implements Serializable {
 
-	
-	public LoginModel validateUser(LoginModel user) {
-		LoginModel respuesta = new LoginModel();
-		respuesta.setStatus("Invalid User");
-			try {		
-				JSONParser parser = new JSONParser();			
-				Object obj = parser.parse(new FileReader("C:\\Users\\JUANCARLOSHERNANDEZH\\Desktop\\usuarios.json"));				
-				JSONObject jsonObject = (JSONObject) obj;
-			    JSONArray listUsers =  (JSONArray) jsonObject.get("usuarios");
-				
-			   for (int i = 0; i < listUsers.size(); i++) {	
-				   
-				jsonObject = (JSONObject) listUsers.get(i);   
-				if (user.getUser().equals(jsonObject.get("user").toString()) && user.getPassword().equals(jsonObject.get("password"))) {
-					respuesta.setUser(jsonObject.get("user").toString());
-					respuesta.setName(jsonObject.get("name").toString());
-					respuesta.setLastAccess(jsonObject.get("lastAccess").toString());
-					respuesta.setStatus(jsonObject.get("status").toString());
-					respuesta.setPassword("******");
-								
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -3410421951691119793L;
+
+
+	/**
+	 * 
+	 * @param user
+	 * @return
+	 * @throws LoginException
+	 */
+	public UserResponse validateUser(RequestLogin user) throws LoginException {
+		UserResponse respuesta = new UserResponse();
+		try {
+			if(LoginSingleton.getInstance().getUserMap().containsKey(user.getUser())) {
+				UserResponse userMap =  LoginSingleton.getInstance().getUserMap().get(user.getUser());
+				if(user.getPassword().equals(userMap.getPassword())) {
+					respuesta = userMap;
+					respuesta.setStatusUser(StatusUser.ACTIVE.name());
+					respuesta.setStatus("OK");
+				}else {
+					respuesta.setMessage("Usuario y/ password inválidos");
 				}
-				
-		    }
-			   
+			}else {
+				respuesta.setMessage("Usuario y/ password inválidos");
+			}
 			System.out.println("User: " + user.getUser());
 			System.out.println("Password: " + user.getPassword());	
 			return respuesta;
-			
 		} catch (Exception ex) {
-			
+			respuesta.setMessage(ex.getMessage());
 			return respuesta;
-		
+		}
 	}
-}
 }
