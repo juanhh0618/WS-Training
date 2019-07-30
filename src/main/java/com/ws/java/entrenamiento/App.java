@@ -4,6 +4,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import com.ws.java.entrenamiento.services.ConsultaRepository;
+
 /**
  * 
  * @author JUANCARLOSHERNANDEZH
@@ -15,6 +17,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @EnableAutoConfiguration //da a entender que vamos a autoconfigurar nuestra aplicacion springboot
 public class App {
     public static void main( String[] args ) {
+     new ConsultaRepository().loadInfo();
      SpringApplication.run(App.class, args); //Aqui estamos indicando cual clase va a ejecutar
     }
 }

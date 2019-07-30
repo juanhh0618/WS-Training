@@ -1,0 +1,22 @@
+{	
+	"usuarios":[	
+	{
+ 	  	"userid" : "juan0618",
+    	"id" : "16108199",
+    	"name" : "Juan Carlos",
+    	"ip" : "170.225.9.140",
+    	"campagna" : "No se",
+    	"fecha" : "23/07/2019"
+
+	}
+	,
+	{
+		"userid" : "juan1818",
+    	"id" : "16101233",
+    	"name" : "Juan Carlos",
+    	"ip" : "170.301.0.193",
+    	"campagna" : "Ni idea",
+    	"fecha" : "24/07/2019"
+	}
+	]
+}
