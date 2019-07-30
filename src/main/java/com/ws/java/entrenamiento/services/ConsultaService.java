@@ -28,8 +28,6 @@ public class ConsultaService {
 				Object obj = parser.parse(new FileReader("C:\\Users\\JUANCARLOSHERNANDEZH\\Desktop\\informacion.json"));				
 				JSONObject jsonObject = (JSONObject) obj;
 			    JSONArray listUsers =  (JSONArray) jsonObject.get("usuarios");
-			    
-			    listUsers.get(1);
 				
 			   for (int i = 0; i < listUsers.size(); i++) {	
 				   
