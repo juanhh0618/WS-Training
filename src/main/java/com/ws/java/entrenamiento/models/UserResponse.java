@@ -22,30 +22,30 @@ public class UserResponse extends GenericResponse {
 	/**usuario propio del usuario que esta almacenado en los registros
 	 * 
 	 */
-	@ApiModelProperty(value = "Usuario,el usuario contiene letras y numeros" , required = false, dataType = "String", example = "Pepe283")
+	@ApiModelProperty(value = "Usuario,el usuario contiene letras y numeros", dataType = "String", example = "Pepe283")
 	private String user;
 	
 	/**contraseña propio del usuario que esta almacenado en los registros
 	 * 
 	 */
-	@ApiModelProperty(value = "Password,no hay restricciones para la contraseña" , required = false, dataType = "String", example = "Pepe283**")
+	@ApiModelProperty(value = "Password,no hay restricciones para la contraseña", dataType = "String", example = "Pepe283**")
 	private String password;
 	
 	/**nombre del usuario que se encuentra en los registros
 	 * 
 	 */
-	@ApiModelProperty(value = "Nombre, ya sea nombre completo o al menos un nombre y un apellido", required = false, dataType = "String", example = "Pepe Gonzales Rojas")
+	@ApiModelProperty(value = "Nombre, ya sea nombre completo o al menos un nombre y un apellido", dataType = "String", example = "Pepe Gonzales Rojas")
 	private String name;
 	
 	/**ultima fecha en que el usuario se logueo
 	 * 
 	 */
-	@ApiModelProperty(value = "LastAccess,tiene un formato tipo date pero aun asi es string", required = false, dataType = "String", example = "24/07/2019")
+	@ApiModelProperty(value = "LastAccess,tiene un formato tipo date pero aun asi es string", dataType = "String", example = "24/07/2019")
 	private String lastAccess;
 	/**status de cuales son los posibles status?
 	 * 
 	 */
-	@ApiModelProperty(value = "OK = el usuario se loguee bien, ERROR = hubo un error interno" , required = true, dataType = "String", example = "ERROR")
+	@ApiModelProperty(value = "OK = el usuario se loguee bien, ERROR = hubo un error interno" , required = true, dataType = "String", example = "ACTIVE")
 	private String statusUser;
 
 	public String getUser() {

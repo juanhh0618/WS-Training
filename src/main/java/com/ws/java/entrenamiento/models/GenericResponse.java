@@ -20,13 +20,13 @@ public class GenericResponse implements Serializable{
 	/**
 	 * Status OK ERROR
 	 */
-	@ApiModelProperty(required = false, dataType = "String", example = "OK")
+	@ApiModelProperty(dataType = "String", example = "OK")
 	private String status;
 	
 	/**
 	 * Mensaje si hay error
 	 */
-	@ApiModelProperty(required = false, dataType = "String", example = "Datos Erroneos")
+	@ApiModelProperty(dataType = "String", example = "Datos Erroneos")
 	private String message;
 
 	
