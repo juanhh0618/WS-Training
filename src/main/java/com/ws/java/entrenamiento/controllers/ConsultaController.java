@@ -19,7 +19,7 @@ import io.swagger.annotations.ApiParam;
  * @author JUANCARLOSHERNANDEZH
  * @since 23/07/2019
  * @category Controller
- * In this controller we are publish the web service
+ * In this controller we are publish the web service of consulta
  */
 @Api(tags = "Consulta")
 @RestController //Le decimos que es un rest controller

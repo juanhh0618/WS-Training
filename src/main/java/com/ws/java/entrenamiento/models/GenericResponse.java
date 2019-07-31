@@ -2,6 +2,8 @@ package com.ws.java.entrenamiento.models;
 
 import java.io.Serializable;
 
+import io.swagger.annotations.ApiModelProperty;
+
 /**
  *
  * @author 
@@ -15,11 +17,14 @@ public class GenericResponse implements Serializable{
 	/**
 	 * Status OK ERROR
 	 */
+	@ApiModelProperty(value = "OK = Se encontro el usuario y la informacion sera expuesta"+
+			"ERROR = No se encontro el usuario",required = false,dataType = "String")
 	private String status;
 	
 	/**
-	 * Mesaje si hay error
+	 * Mensaje si hay error especificando cual fue
 	 */
+	@ApiModelProperty(required = false, dataType = "String" , example = "El usuario no esta en los registros")
 	private String message;
 
 	
