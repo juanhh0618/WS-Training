@@ -5,10 +5,12 @@ package com.ws.java.entrenamiento.models;
 
 import java.io.Serializable;
 
+import io.swagger.annotations.ApiModelProperty;
+
 /**
  *
- * @author 
- * @since 30 jul. 2019
+ * @author JUANCARLOSHERNANDEZH
+ * @since 30/07/2019
  */
 public class GenericResponse implements Serializable{
 
@@ -18,11 +20,13 @@ public class GenericResponse implements Serializable{
 	/**
 	 * Status OK ERROR
 	 */
+	@ApiModelProperty(required = false, dataType = "String", example = "OK")
 	private String status;
 	
 	/**
-	 * Mesaje si hay error
+	 * Mensaje si hay error
 	 */
+	@ApiModelProperty(required = false, dataType = "String", example = "Datos Erroneos")
 	private String message;
 
 	

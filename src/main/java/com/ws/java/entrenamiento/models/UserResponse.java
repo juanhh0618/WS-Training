@@ -18,14 +18,34 @@ public class UserResponse extends GenericResponse {
 	 * 
 	 */
 	private static final long serialVersionUID = -7060843246559213291L;
-	private String user;
-	private String password;
-	private String name;
-	private String lastAccess;
-	/**status dcuales son los posibles status?
+	
+	/**usuario propio del usuario que esta almacenado en los registros
 	 * 
 	 */
-	@ApiModelProperty(value = "OK = el usario se logue bien ERROR hub un error interno" , required = true, dataType = "String", example = "pepe")
+	@ApiModelProperty(value = "Usuario,el usuario contiene letras y numeros" , required = false, dataType = "String", example = "Pepe283")
+	private String user;
+	
+	/**contraseña propio del usuario que esta almacenado en los registros
+	 * 
+	 */
+	@ApiModelProperty(value = "Password,no hay restricciones para la contraseña" , required = false, dataType = "String", example = "Pepe283**")
+	private String password;
+	
+	/**nombre del usuario que se encuentra en los registros
+	 * 
+	 */
+	@ApiModelProperty(value = "Nombre, ya sea nombre completo o al menos un nombre y un apellido", required = false, dataType = "String", example = "Pepe Gonzales Rojas")
+	private String name;
+	
+	/**ultima fecha en que el usuario se logueo
+	 * 
+	 */
+	@ApiModelProperty(value = "LastAccess,tiene un formato tipo date pero aun asi es string", required = false, dataType = "String", example = "24/07/2019")
+	private String lastAccess;
+	/**status de cuales son los posibles status?
+	 * 
+	 */
+	@ApiModelProperty(value = "OK = el usuario se loguee bien, ERROR = hubo un error interno" , required = true, dataType = "String", example = "ERROR")
 	private String statusUser;
 
 	public String getUser() {
