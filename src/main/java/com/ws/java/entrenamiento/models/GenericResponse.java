@@ -5,12 +5,10 @@ package com.ws.java.entrenamiento.models;
 
 import java.io.Serializable;
 
-import io.swagger.annotations.ApiModelProperty;
-
 /**
  *
- * @author JUANCARLOSHERNANDEZH
- * @since 30/07/2019
+ * @author 
+ * @since 30 jul. 2019
  */
 public class GenericResponse implements Serializable{
 

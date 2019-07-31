@@ -1,0 +1,16 @@
+diff a/src/main/java/com/ws/java/entrenamiento/models/GenericResponse.java b/src/main/java/com/ws/java/entrenamiento/models/GenericResponse.java	(rejected hunks)
+@@ -5,10 +5,12 @@
+ 
+ import java.io.Serializable;
+ 
++import io.swagger.annotations.ApiModelProperty;
++
+ /**
+  *
+- * @author 
+- * @since 30 jul. 2019
++ * @author JUANCARLOSHERNANDEZH
++ * @since 30/07/2019
+  */
+ public class GenericResponse implements Serializable{
+ 
