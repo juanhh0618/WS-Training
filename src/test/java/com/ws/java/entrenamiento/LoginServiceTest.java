@@ -3,6 +3,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
 import org.junit.Test;
+
+import com.ws.java.entrenamiento.services.LoginRepository;
 import com.ws.java.entrenamiento.services.LoginService;
 import com.ws.java.entrenamiento.models.RequestLogin;
 import com.ws.java.entrenamiento.models.UserResponse;
@@ -22,6 +24,7 @@ public class LoginServiceTest {
 	@Test
 	public void validateUserNoExistTest() throws Exception {
 		try {
+			new LoginRepository().loadUsers();
 			RequestLogin user = new RequestLogin();
 			user.setUser("judfdfan0618");
 			user.setPassword("123");
@@ -37,6 +40,7 @@ public class LoginServiceTest {
 	@Test
 	public void validateUserExistTest() throws Exception {
 		try {
+			new LoginRepository().loadUsers();
 			RequestLogin user = new RequestLogin();
 			user.setUser("juan0618");
 			user.setPassword("123");
@@ -51,6 +55,7 @@ public class LoginServiceTest {
 	@Test
 	public void validateUserExistPasswordNot() throws Exception{
 		try {
+			new LoginRepository().loadUsers();
 			RequestLogin user = new RequestLogin();
 			user.setUser("juan0618");
 			user.setPassword("3443");
