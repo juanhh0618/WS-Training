@@ -19,8 +19,8 @@ import com.ws.java.singleton.LoginSingleton;
 
 /**
  *
- * @author JUANCARLOSHERNANDEZH
- * @since 30/07/2019
+ * @author Elpisius
+ * @since 30 jul. 2019
  */
 @Service
 public class LoginRepository implements Serializable {
