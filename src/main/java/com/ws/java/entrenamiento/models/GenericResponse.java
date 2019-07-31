@@ -5,6 +5,8 @@ package com.ws.java.entrenamiento.models;
 
 import java.io.Serializable;
 
+import io.swagger.annotations.ApiModelProperty;
+
 /**
  *
  * @author 
@@ -24,7 +26,7 @@ public class GenericResponse implements Serializable{
 	/**
 	 * Mensaje si hay error
 	 */
-	@ApiModelProperty(dataType = "String", example = "Datos Erroneos")
+	@ApiModelProperty(dataType = "String", example = "Datos Correctos")
 	private String message;
 
 	
