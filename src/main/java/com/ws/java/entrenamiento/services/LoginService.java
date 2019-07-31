@@ -46,11 +46,11 @@ public class LoginService implements Serializable {
 					respuesta.setStatus("OK");
 					respuesta.setMessage("El usuario ha ingresado correctamente");
 				}else {
-					respuesta.setMessage("Usuario y/o password inválidos");
+					respuesta.setStatus("Invalid");
 					
 				}
 			}else {
-				respuesta.setMessage("Usuario y/o password inválidos");
+				respuesta.setStatus("Error");
 				
 			}
 			

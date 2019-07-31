@@ -45,7 +45,7 @@ public class UserResponse extends GenericResponse {
 	/**status de cuales son los posibles status?
 	 * 
 	 */
-	@ApiModelProperty(value = "OK = el usuario se loguee bien, ERROR = hubo un error interno" , required = true, dataType = "String", example = "ACTIVE")
+	@ApiModelProperty(value = "OK = el usuario se loguee bien, ERROR = hubo un error interno,TRY AGAIN = Usuario y/o Contraseña incorrecta" , required = true, dataType = "String", example = "ACTIVE")
 	private String statusUser;
 
 	public String getUser() {

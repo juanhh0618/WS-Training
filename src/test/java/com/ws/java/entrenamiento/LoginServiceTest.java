@@ -27,7 +27,7 @@ public class LoginServiceTest {
 			user.setPassword("123");
 			LoginService lo = new LoginService();
 			UserResponse loginresponse = lo.validateUser(user);
-			assertEquals(loginresponse.getStatus(),"ERROR");
+			assertEquals(loginresponse.getStatus(),"Error");
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}
@@ -36,44 +36,34 @@ public class LoginServiceTest {
 	
 	@Test
 	public void validateUserExistTest() throws Exception {
-		RequestLogin user = new RequestLogin();
-		user.setUser("judfdfan18");
-		user.setPassword("123");
-		LoginService lo = new LoginService();
-		UserResponse loginresponse = lo.validateUser(user);
-		assertEquals(loginresponse.getStatus(),"OK");
-	}
-	
-	
-	@Test
-	public void validateUserTest() throws Exception {
-		RequestLogin user = new RequestLogin();
-		user.setUser("juan0618");
-		user.setPassword("123");
-		LoginService lo = new LoginService();
-		UserResponse loginresponse = lo.validateUser(user); //new LoginController();
-		System.out.println("Primer Escenario de Prueba");
-		System.out.println(loginresponse.getLastAccess());
-		System.out.println(loginresponse.getName());
-		assertEquals("19/07/2019",loginresponse.getLastAccess());
+		try {
+			RequestLogin user = new RequestLogin();
+			user.setUser("juan0618");
+			user.setPassword("123");
+			LoginService lo = new LoginService();
+			UserResponse loginresponse = lo.validateUser(user);
+			assertEquals(loginresponse.getStatus(),"OK");
+		} catch (Exception e) {
+			fail(e.getMessage());
+		}
 	}
 	
 	@Test
-	public void validateUserTestWrong() throws Exception {
-		
-		RequestLogin user = new RequestLogin();
-		
-		user.setUser("dsfgsdg32");
-		user.setPassword("fg3235");
-		
-		LoginService lo = new LoginService();
-		
-		UserResponse loginresponse = lo.validateUser(user); //new LoginController();
-			System.out.println("Segundo Escenario de Prueba");
-			System.out.println(loginresponse.getStatus());
-			assertEquals("Invalid User",loginresponse.getStatus());
-			
+	public void validateUserExistPasswordNot() throws Exception{
+		try {
+			RequestLogin user = new RequestLogin();
+			user.setUser("juan0618");
+			user.setPassword("3443");
+			LoginService lo = new LoginService();
+			UserResponse loginresponse = lo.validateUser(user);
+			assertEquals(loginresponse.getStatus(),"Invalid");
+		} catch (Exception e) {
+			fail(e.getMessage());
+		}
 	}
+	
+	
+	
 	
 }
 
