@@ -3,6 +3,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
 import org.junit.Test;
+
+import com.ws.java.entrenamiento.services.ConsultaRepository;
 import com.ws.java.entrenamiento.services.ConsultaService;
 import com.ws.java.entrenamiento.models.RequestConsulta;
 import com.ws.java.entrenamiento.models.ConsultaResponse;
@@ -19,9 +21,11 @@ public class ConsultaServiceTest {
 	
 	
 	
+	
 	@Test
 	public void validateUserNoExistTest() throws Exception {
 		try {
+			new ConsultaRepository().loadInfo();
 			RequestConsulta user = new RequestConsulta();
 			user.setUser("judfdfan0618");
 			ConsultaService co = new ConsultaService();
@@ -35,11 +39,16 @@ public class ConsultaServiceTest {
 	
 	@Test
 	public void validateUserExistTest() throws Exception {
-		RequestConsulta user = new RequestConsulta();
-		user.setUser("juan0618");
-		ConsultaService co = new ConsultaService();
-		ConsultaResponse consultaresponse = co.validateUser(user);
-		assertEquals(consultaresponse.getStatus(),"OK");
+		try {
+			new ConsultaRepository().loadInfo();
+			RequestConsulta user = new RequestConsulta();
+			user.setUser("juan0618");
+			ConsultaService co = new ConsultaService();
+			ConsultaResponse consultaresponse = co.validateUser(user);
+			assertEquals(consultaresponse.getStatus(),"OK");
+		} catch (Exception e) {
+			fail(e.getMessage());
+		}
 	}
 	
 	
